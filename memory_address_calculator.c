@@ -16,3 +16,6 @@ int main() {
     get_address_of_indexes(array, total_elements);
     return 0;
 }
+
+
+//gcc -fPIC -shared -o clibrary.so clibrary.c
