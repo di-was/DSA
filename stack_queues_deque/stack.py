@@ -23,5 +23,18 @@ class ArrayStack:
         if self.is_empty():
             raise Empty("Stack is empty")
         return self._data.pop()
+    
+    def transfer(self, target):
+        total_elements = len(self._data)
+        for x in range(total_elements - 1, -1):
+            target.push(self._data[x])
+        return True
+    
 
+    def empty(self):
+        if self.is_empty():
+            return None
+        else:
+            self.pop()
+            self.empty()
 
