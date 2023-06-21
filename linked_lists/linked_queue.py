@@ -1,6 +1,3 @@
-# FIFO
-# remove (dequeue) from the head and append(enqueue) to the tail
-# head, tail, size
 
 class Empty(Exception):
     pass
