@@ -16,10 +16,10 @@ class LinkedDeque(_DoublyLinkedList):
         return self._trailer._previous._element
     
     def insert_first(self, element):
-        self._insert_between(e, self._header, self._trailer)
+        self._insert_between(element, self._header, self._trailer)
 
     def insert_last(self, element):
-        self._insert_between(e, self._trailer._previous, self._trailer)
+        self._insert_between(element, self._trailer._previous, self._trailer)
 
     def delete_first(self):
         if self.is_empty():
@@ -31,3 +31,4 @@ class LinkedDeque(_DoublyLinkedList):
             raise Empty("Deque is empty")
         
         return self._delete_node(self._trailer._previous)
+    
